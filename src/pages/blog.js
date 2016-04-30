@@ -36,8 +36,12 @@ export default class BlogPage extends React.Component {
           </article>
         </div>
 
-        <CommentBox />
+        <CommentBox apiUrl="api/blog/comments.json" />
       </div>
     )
   }
+}
+
+CommentBox.propTypes = {
+  apiUrl: React.PropTypes.string.isRequired
 }

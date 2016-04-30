@@ -19,8 +19,12 @@ export default class VideoPage extends React.Component {
           </article>
         </div>
 
-        <CommentBox />
+        <CommentBox apiUrl="api/videos/comments.json" />
       </div>
     )
   }
+}
+
+CommentBox.propTypes = {
+  apiUrl: React.PropTypes.string.isRequired
 }

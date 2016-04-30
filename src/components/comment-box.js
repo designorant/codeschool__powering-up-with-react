@@ -96,7 +96,7 @@ export default class CommentBox extends React.Component {
   _fetchComments() {
     jQuery.ajax({
       method: 'GET',
-      url: 'api/blog/comments.json',
+      url: this.props.apiUrl,
       success: (comments) => {
         this.setState({ comments })
       }
